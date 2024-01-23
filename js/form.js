@@ -3,16 +3,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const areaErrores = document.getElementById("areaErrores");
 
     formulario.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita que el formulario se envíe automáticamente
+        event.preventDefault(); 
 
-        // Obtener los valores de los campos
+        
         const nombre = document.getElementById("nombre").value.trim();
         const apellidos = document.getElementById("apellidos").value.trim();
         const telefono = document.getElementById("tlf").value.trim();
         const correo = document.getElementById("correo").value.trim();
         const msg = document.getElementById("msg").value.trim();
 
-        // Validación utilizando expresiones regulares
+        
         let errores = [];
 
         const nombreRegex = /^[A-Z][a-zA-Z]*$/;
@@ -27,35 +27,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const telefonoRegex = /^[6-7]\d{8}$/;
         if (!telefonoRegex.test(telefono)) {
-            errores.push("El teléfono debe tener 9 dígitos y empezar por 6 o 7.");
+            errores.push("Formato de teléfono incorrecto.");
         }
 
         const correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!correoRegex.test(correo)) {
-            errores.push("El correo debe contener una @ y terminar con .com, .es, .etc.");
+            errores.push("Formato de correo incorrecto.");
         }
 
         if (msg.length < 10) {
             errores.push("El mensaje debe tener al menos 10 caracteres.");
         }
 
-        // Mostrar mensajes de error si los hay
+        
         if (errores.length > 0) {
             mostrarErrores(errores);
-        } else {
-            // Pedir confirmación antes de enviar el formulario
-            const confirmacion = confirm("¿Estás seguro de que deseas enviar el formulario?");
-            if (confirmacion) {
-                formulario.submit(); // Envía el formulario si se confirma
+        } else if(errores.length == 0 && confirm("¿Estás seguro de que deseas enviar el formulario?")) {
+            
+            formulario.submit(); 
             }
         }
-    });
+    );
 
     function mostrarErrores(errores) {
-        // Limpiar mensajes anteriores
+        
         areaErrores.innerHTML = "";
 
-        // Mostrar nuevos mensajes de error
+        
         errores.forEach(function (error) {
             const li = document.createElement("li");
             li.textContent = error;
