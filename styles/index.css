@@ -14,6 +14,7 @@ body {
 }
 
 nav {
+    
     background-color: #fff;
     color: #333;
     display: flex;
@@ -59,6 +60,7 @@ nav {
     align-items: center;
     margin: 0 auto;
     color: #333;
+    clip-path: polygon(0 0, 100% 0, 91% 92%, 14% 92%);
 }
 
 .hero-container::before {
@@ -86,10 +88,11 @@ nav {
 }
 
 .hero {
-    background-image: url(../imgs/hero1.jpg);
+    background: url(../imgs/hero1.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    clip-path: polygon(0 0, 100% 0, 91% 92%, 14% 92%);
 }
 
 .hero h1 {
@@ -102,6 +105,28 @@ nav {
     color: #333;
 }
 
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.card {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    margin: 1rem;
+    flex: 1;
+}
+
+.card img {
+    width: 100%; 
+    max-height: 200px; 
+    object-fit: cover; 
+    margin-bottom: 1rem; 
+}
+
 footer {
     background-color: #fff;
     color: #333;
@@ -110,5 +135,18 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 3vh;
+}
+
+@media screen and (max-width: 600px) {
+    .hero {
+        
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .hero {
+        /* Adjust the clip path for screens up to 400px if needed */
+        clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+    }
 }
