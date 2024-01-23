@@ -4,8 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/normalize.css">
 </head>
 <body>
+    <div class="nav-container">
+        <nav>
+
+            <div class="logo">
+                <a href="index.html"><img src="imgs/logo.jpg" alt="Logo"></a>
+            </div>
     
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+
+            
+        </nav>
+        
+    </div>
+    
+
+    <div class="form-container">
+
+        <h2>Contactanos</h2>
+
+        <form action="correcto.html" method="get" id="formulario" class="form">
+            
+            <input type="text" name="nombre" id="nombre" class="nombre" placeholder="Nombre">
+
+            <input type="text" name="apellidos" id="apellidos" class="nombre" placeholder="Apellidos">
+
+            <input type="text" name="tlf" id="tlf" class="nombre" placeholder="Teléfono">
+
+            <input type="text" name="correo" id="correo" class="correo" placeholder="Correo electronico">
+
+            <textarea name="msg" id="msg" class="msg" cols="30" rows="10" placeholder="Por favor, inserta un mensaje"></textarea>
+            
+            <input type="submit" value="Enviar" class="btn" id="btn">
+
+            <ul id="areaErrores" class="areaErrores"></ul>
+
+        </form>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 DopeSkate</p>
+    </footer>
+<script src="js/form.js"></script>
 </body>
 </html>
