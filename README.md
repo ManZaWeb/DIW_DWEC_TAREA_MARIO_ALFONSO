@@ -3,7 +3,7 @@
 **Autor** Mario Alfonso Nuñez (DAW)
 
 ## Repositorio en GitHub
-Encuentra el código fuente en [GitHub]().
+Encuentra el código fuente en [GitHub](https://github.com/ManZaWeb/DIW_DWEC_TAREA_MARIO_ALFONSO.git).
 
 ## Descripción
 Este proyecto es un sitio web para DopeSkate, una plataforma dedicada al mundo del skateboarding. Incluye páginas como Inicio, Acerca de, Contacto, y un formulario de contacto.
@@ -11,11 +11,13 @@ Este proyecto es un sitio web para DopeSkate, una plataforma dedicada al mundo d
 ## Tecnologías Utilizadas
 - HTML
 - CSS
+- JS
 
 ## Estructura del Proyecto
 - **index.html**: Página de inicio.
 - **contacto.html**: Página con un formulario de contacto.
 - **styles/**: Carpeta que contiene archivos de estilo CSS.
+- **js/**; Carpeta que contiene archivos de JavaScript.
 - **imgs/**: Carpeta que contiene imágenes utilizadas en el proyecto.
 - **assets/fonts**: Carpeta que contiene la fuente utilizada.
 
