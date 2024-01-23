@@ -1,3 +1,6 @@
+// Autor: Mario Alfonso Nuñez
+//GitHub:
+
 document.addEventListener("DOMContentLoaded", function () {
     const formulario = document.getElementById("formulario");
     const areaErrores = document.getElementById("areaErrores");
