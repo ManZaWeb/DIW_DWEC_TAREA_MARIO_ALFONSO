@@ -11,6 +11,11 @@
     --fuentePrincipal: 'DashDemo', Arial, sans-serif
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: var(--fuentePrincipal);
@@ -22,6 +27,8 @@ body {
     width: 100%;
 }
 
+/*  Estilos para el header */
+
 nav {
     
     background-color: var(--secundario);
@@ -30,7 +37,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem;
-    height: 20vh;
+    height: 10vh;
 }
 
 .logo img {
@@ -40,7 +47,7 @@ nav {
 .menu {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     width: 100%;
 }
@@ -48,6 +55,7 @@ nav {
 .menu li {
     margin-right:0 1.5rem;
     padding: 1rem;
+
 }
 
 .menu a {
@@ -61,8 +69,67 @@ nav {
     color: ;  
 } */
 
+/* Estilos para el video */
+.video {
+    position: relative;
+    max-height: 100rem;
+    min-height: 50rem;
+    height: 60vh;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: .5rem;
+    cursor: pointer;
 
+}
 
+.video .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0.6110819327731092) 0%, rgba(255,252,0,0.37298669467787116) 50%, rgba(0,0,0,0.6110819327731092) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.video .overlay h2 {
+    font-size: 15rem;
+    margin-bottom: 1rem;
+    color: var(--terciario);
+}
+
+.video .overlay p {
+    font-size: 5rem;
+    color: var(--secundario);
+}
+
+.video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 100rem;
+    min-height: 50rem;
+}
+
+.container-video{
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    padding: 0 2rem;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+/* Estilos para cards*/
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -70,11 +137,7 @@ nav {
     padding: 2rem;
 }
 
-@media (min-width: 768px) {
-    .cards {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+
 
 .card {
     text-align: center;
@@ -115,15 +178,33 @@ nav {
     cursor: pointer;
 }
 
+/* Estilos para el footer */
+
 footer {
     background-color: var(--secundario);
     color: var(--primario);
     text-align: center;
     padding: 1rem 0;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
+
+/* Estilos para el carrusel */
+
+.carousel {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+}
+#imagen {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+}
+
+
+/* Media Querys */
 
 @media screen and (max-width: 600px) {
     .hero {
@@ -136,5 +217,11 @@ footer {
     .hero {
         /* Adjust the clip path for screens up to 400px if needed */
         clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+    }
+}
+
+@media (min-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

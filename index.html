@@ -17,20 +17,29 @@
             </div>
     
             <ul class="menu">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Acerca de</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#galeria">Galeria</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
             
         </nav>
     </div>
-    
-    <div class="hero-container">
-        <header class="hero">
-            <h1>DopeSkates</h1>
-            <p>Tu tienda de Skate en Asturias.</p>
-        </header>
+
+    <div class="video">
+        <div class="overlay">
+            <div class="container container-video">
+                <h2>DopeSkates</h2>
+                <p>Tu tienda de Skate en Asturias.</p>                
+            </div>
+        </div>
+        <video autoplay loop muted>
+            <source src="assets/video/video.mp4" type="video/mp4">
+            <source src="assets/video/video.ogg" type="video/ogg">
+            <source src="assets/video/video.webm" type="video/webm">
+        </video>
     </div>
+    
+    
 
     <div class="cards">
 
@@ -79,10 +88,22 @@
         <br><br><br><br>
     </div>
 
+    <section id="carro" class="carousel-section">
+        <div class="carousel">
+            <button id="retroceder">Retroceder</button>
+            <div id="imagen"></div>
+            <button id="avanzar">Avanzar</button>
+        </div>
+        <div class="controles">
+            <button id="play">Play</button>
+            <button id="stop" disabled>Stop</button>
+        </div>
+    </section>
+
     <footer>
         <p>&copy; 2024 DopeSkate</p>
     </footer>
     
-
+<script src="js/index.js"></script>
 </body>
 </html>
