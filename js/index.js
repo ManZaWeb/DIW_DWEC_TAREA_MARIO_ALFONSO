@@ -76,6 +76,47 @@ window.onload = function () {
         $botonStop.setAttribute('disabled', true);
     }
 
+// Funcion para abrir la ventana modal con la imagen
+function abrirModal() {
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+    modal.style.position = 'fixed';
+    modal.style.top = '0';
+    modal.style.left = '0';
+    modal.style.width = '100%';
+    modal.style.height = '100%';
+    modal.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+    modal.style.display = 'flex';
+    modal.style.justifyContent = 'center';
+    modal.style.alignItems = 'center';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <img src="${IMAGENES[posicionActual]}" alt="Imagen">
+            <button id="cerrarModal">Cerrar</button>
+        </div>
+    `;
+    document.body.appendChild(modal);
+
+    const $cerrarModal = modal.querySelector('#cerrarModal');
+    $cerrarModal.addEventListener('click', cerrarModal);
+
+    modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            cerrarModal();
+        }
+    });
+}
+
+function cerrarModal() {
+    const $modal = document.querySelector('.modal');
+    document.body.removeChild($modal);
+}
+
+
+// Evento para abrir la ventana modal al hacer clic en la imagen
+$imagen.addEventListener('click', abrirModal);
+    
+
     // Eventos
     $botonAvanzar.addEventListener('click', pasarFoto);
     $botonRetroceder.addEventListener('click', retrocederFoto);

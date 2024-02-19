@@ -196,6 +196,28 @@ footer {
     max-width: 800px;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
+}
+
+.carousel-section h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--terciario);
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    background-color: var(--terciario);
+    color: var(--primario);
+    
+
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    height: 5rem;
 }
 #imagen {
     width: 100%;
