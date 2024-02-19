@@ -125,3 +125,16 @@ $imagen.addEventListener('click', abrirModal);
     // Iniciar
     renderizarImagen();
 }
+
+window.addEventListener('scroll', function() {
+    var barraNavegacion = document.querySelector('.nav-container');
+
+    // Verifica si el usuario ha desplazado la página más allá de cierto punto
+    if (window.scrollY > 100) {
+        barraNavegacion.classList.add('mostrar');
+        barraNavegacion.style.position = 'fixed';
+
+    } else {
+        barraNavegacion.classList.remove('mostrar');
+    }
+});
