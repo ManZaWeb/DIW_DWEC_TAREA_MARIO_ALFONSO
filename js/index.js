@@ -130,11 +130,40 @@ window.addEventListener('scroll', function() {
     var barraNavegacion = document.querySelector('.nav-container');
 
     // Verifica si el usuario ha desplazado la página más allá de cierto punto
-    if (window.scrollY > 100) {
+    if (window.scrollY > 100 ) {
         barraNavegacion.classList.add('mostrar');
         barraNavegacion.style.position = 'fixed';
+        barraNavegacion.style.width = '100%';
+        barraNavegacion.style.top = '0';
 
-    } else {
+    } 
+    if (window.scrollY < 29) {
+        barraNavegacion.style.position = 'relative';
+        barraNavegacion.style.top = '0';
+
+    }
+
+    else {
         barraNavegacion.classList.remove('mostrar');
     }
 });
+
+function scrollNav() {
+    const enlaces = document.querySelectorAll('.mwnu a');
+ 
+    // Un evento click para cada enlace
+ 
+    enlaces.forEach( enlace => {
+        enlace.addEventListener('click', function(e) {
+            // Le quitamos el comportamiento predeterminado al enlace
+            e.preventDefault();
+ 
+            // Se obtiene el valor del atributo href del enlace en el que se hizo clic.
+            const seccionScroll = e.target.attributes.href.value;
+            // Selección de la sección de destino
+            const seccion = document.querySelector(seccionScroll);
+            // Desplazamiento suave hacia la sección
+            seccion.scrollIntoView({ behavior: "smooth"});
+        });
+    });
+}
