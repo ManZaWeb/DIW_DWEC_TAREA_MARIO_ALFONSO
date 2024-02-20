@@ -101,7 +101,7 @@ function abrirModal() {
     $cerrarModal.addEventListener('click', cerrarModal);
 
     modal.addEventListener('click', function(event) {
-        if (event.target === modal) {
+        if (event.target === modal || event.target !== modal) {
             cerrarModal();
         }
     });

@@ -200,14 +200,17 @@ footer {
 }
 
 .carousel-section h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: var(--terciario);
+    font-size: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
-    height: 5rem;
-    background-color: var(--terciario);
+    height: 3rem;
+    background-color: var(--secundario);
     color: var(--primario);
+    border: 1px solid var(--primario);
+    margin-bottom: .1rem;
+    margin-top: 1.5rem;
     
 
 }
@@ -224,6 +227,7 @@ footer {
     height: 400px;
     background-size: cover;
 }
+
 
 
 /* Media Querys */
