@@ -140,6 +140,7 @@ footer {
   align-items: center;
   margin-top: 1rem;
   height: 5rem;
+  cursor: pointer;
 }
 
 #imagen {
@@ -150,10 +151,12 @@ footer {
 
 .r-btn {
   width: 10%;
+  cursor: pointer;
 }
 
 .a-btn {
   width: 10%;
+  cursor: pointer;
 }
 
 .c-btn {
@@ -162,6 +165,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 /* Estilos para el video */

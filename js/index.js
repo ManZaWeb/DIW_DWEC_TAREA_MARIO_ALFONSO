@@ -1,3 +1,5 @@
+//Github: https://github.com/ManZaWeb/DIW_DWEC_TAREA_MARIO_ALFONSO.git
+
 window.onload = function () {
     // Variables
     const imgs = [
