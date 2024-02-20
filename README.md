@@ -16,10 +16,10 @@ Este proyecto es un sitio web para DopeSkate, una plataforma dedicada al mundo d
 ## Estructura del Proyecto
 - **index.html**: Página de inicio.
 - **contacto.html**: Página con un formulario de contacto.
-- **styles/**: Carpeta que contiene archivos de estilo SASS.
+- **styles/**: Carpeta que contiene archivos de estilo SASS convertidos a CSS.
+- **sass/**: Carpeta que contiene archivos de estilo SASS.
 - **js/**; Carpeta que contiene archivos de JavaScript.
-- **imgs/**: Carpeta que contiene imágenes utilizadas en el proyecto.
-- **assets/fonts**: Carpeta que contiene la fuente utilizada.
+- **assets/**: Carpeta que contiene los recursos del proyecto.
 
 ## Uso
 1. Abre el archivo `index.html` para acceder a la página de inicio.
