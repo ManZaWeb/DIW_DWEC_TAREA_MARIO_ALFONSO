@@ -148,6 +148,22 @@ footer {
   background-size: cover;
 }
 
+.r-btn {
+  width: 10%;
+}
+
+.a-btn {
+  width: 10%;
+}
+
+.c-btn {
+  width: 25rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Estilos para el video */
 .video {
   position: relative;

@@ -1,6 +1,6 @@
 window.onload = function () {
     // Variables
-    const IMAGENES = [
+    const imgs = [
         '../assets/imgs/1.jpg',
         '../assets/imgs/2.jpg',
         '../assets/imgs/3.jpg',
@@ -9,7 +9,7 @@ window.onload = function () {
         '../assets/imgs/6.jpg'
         
     ];
-    const TIEMPO_INTERVALO_MILESIMAS_SEG = 1000;
+    const time = 1000;
     let posicionActual = 0;
     let $botonRetroceder = document.querySelector('#retroceder');
     let $botonAvanzar = document.querySelector('#avanzar');
@@ -20,11 +20,11 @@ window.onload = function () {
 
     // Funciones
 
-    /**
-     * Funcion que cambia la foto en la siguiente posicion
-     */
+   
+    //Funcion que cambia la foto en la siguiente posicion
+    
     function pasarFoto() {
-        if(posicionActual >= IMAGENES.length - 1) {
+        if(posicionActual >= imgs.length - 1) {
             posicionActual = 0;
         } else {
             posicionActual++;
@@ -32,30 +32,30 @@ window.onload = function () {
         renderizarImagen();
     }
 
-    /**
-     * Funcion que cambia la foto en la anterior posicion
-     */
+    
+    //Funcion que cambia la foto en la anterior posicion
+     
     function retrocederFoto() {
         if(posicionActual <= 0) {
-            posicionActual = IMAGENES.length - 1;
+            posicionActual = imgs.length - 1;
         } else {
             posicionActual--;
         }
         renderizarImagen();
     }
 
-    /**
-     * Funcion que actualiza la imagen de imagen dependiendo de posicionActual
-     */
+    
+    //Funcion que actualiza la imagen de imagen dependiendo de posicionActual
+    
     function renderizarImagen () {
-        $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
+        $imagen.style.backgroundImage = `url(${imgs[posicionActual]})`;
     }
 
-    /**
-     * Activa el autoplay de la imagen
-     */
+    
+    //Activa el autoplay de la imagen
+    
     function playIntervalo() {
-        intervalo = setInterval(pasarFoto, TIEMPO_INTERVALO_MILESIMAS_SEG);
+        intervalo = setInterval(pasarFoto, time);
         // Desactivamos los botones de control
         $botonAvanzar.setAttribute('disabled', true);
         $botonRetroceder.setAttribute('disabled', true);
@@ -64,9 +64,9 @@ window.onload = function () {
 
     }
 
-    /**
-     * Para el autoplay de la imagen
-     */
+    
+     //Parar el autoplay de la imagen
+     
     function stopIntervalo() {
         clearInterval(intervalo);
         // Activamos los botones de control
@@ -91,15 +91,14 @@ function abrirModal() {
     modal.style.alignItems = 'center';
     modal.innerHTML = `
         <div class="modal-content">
-            <img src="${IMAGENES[posicionActual]}" alt="Imagen">
-            <button id="cerrarModal">Cerrar</button>
+            <img src="${imgs[posicionActual]}" alt="Imagen">
+            
         </div>
     `;
-    document.body.appendChild(modal);
+    document.body.appendChild(modal);    
 
-    const $cerrarModal = modal.querySelector('#cerrarModal');
-    $cerrarModal.addEventListener('click', cerrarModal);
-
+    //Evento para cerrar el modal al hacer click fuera de la imagen o en la imagen
+    
     modal.addEventListener('click', function(event) {
         if (event.target === modal || event.target !== modal) {
             cerrarModal();
@@ -112,12 +111,8 @@ function cerrarModal() {
     document.body.removeChild($modal);
 }
 
-
-// Evento para abrir la ventana modal al hacer clic en la imagen
-$imagen.addEventListener('click', abrirModal);
-    
-
     // Eventos
+    $imagen.addEventListener('click', abrirModal);
     $botonAvanzar.addEventListener('click', pasarFoto);
     $botonRetroceder.addEventListener('click', retrocederFoto);
     $botonPlay.addEventListener('click', playIntervalo);
@@ -125,6 +120,9 @@ $imagen.addEventListener('click', abrirModal);
     // Iniciar
     renderizarImagen();
 }
+
+
+// Función para el desplazamiento de la barra de navegación
 
 window.addEventListener('scroll', function() {
     var barraNavegacion = document.querySelector('.nav-container');
@@ -148,21 +146,23 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// Función para el desplazamiento a traves de los enlaces del nav
+
 function scrollNav() {
-    const enlaces = document.querySelectorAll('.mwnu a');
+    const enlaces = document.querySelectorAll('.menu a');
  
     // Un evento click para cada enlace
  
     enlaces.forEach( enlace => {
         enlace.addEventListener('click', function(e) {
-            // Le quitamos el comportamiento predeterminado al enlace
-            e.preventDefault();
- 
-            // Se obtiene el valor del atributo href del enlace en el que se hizo clic.
+            
+            e.preventDefault(); 
+            
             const seccionScroll = e.target.attributes.href.value;
-            // Selección de la sección de destino
+            
             const seccion = document.querySelector(seccionScroll);
-            // Desplazamiento suave hacia la sección
+
+            // Comportamiento del desplazamiento suave
             seccion.scrollIntoView({ behavior: "smooth"});
         });
     });
