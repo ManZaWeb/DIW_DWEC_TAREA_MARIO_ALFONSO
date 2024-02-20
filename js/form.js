@@ -64,3 +64,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+const darkModeButton = document.getElementById("darkModeButton");
+const body = document.body;
+const formulario = document.getElementById("form-container");
+
+darkModeButton.addEventListener("click", function () {
+  body.classList.toggle("dark-mode");
+  formulario.classList.toggle("dark-mode-form");
+});
+

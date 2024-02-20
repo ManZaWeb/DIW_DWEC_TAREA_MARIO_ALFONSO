@@ -163,6 +163,16 @@ li{
     color: red;
 }
 
+.dark-mode {
+    background-color: var(--secundario);
+    color: var(--primario);
+}
+
+.dark-mode-form {
+    background-color: var(--primario);
+    color: var(--secundario);
+}
+
 footer {
     background-color: var(--secundario);
     color: var(--primario);
