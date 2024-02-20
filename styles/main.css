@@ -291,4 +291,48 @@ li {
   color: var(--secundario);
 }
 
+/* Media queries para hacer el video responsive */
+@media screen and (max-width: 320px) {
+  .video .overlay h2 {
+    font-size: 2rem;
+    /* Cambia el valor según tus necesidades */
+    width: 100%;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  .video .overlay h2 {
+    font-size: 4rem;
+    /* Cambia el valor según tus necesidades */
+    width: 100%;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .video .overlay h2 {
+    font-size: 6rem;
+    /* Cambia el valor según tus necesidades */
+    width: 100%;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .video .overlay h2 {
+    font-size: 8rem;
+    /* Cambia el valor según tus necesidades */
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .video .overlay h2 {
+    font-size: 11rem;
+    /* Cambia el valor según tus necesidades */
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .video .overlay h2 {
+    font-size: 15rem;
+    /* Cambia el valor según tus necesidades */
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
