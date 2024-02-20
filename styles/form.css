@@ -10,6 +10,11 @@
 
     --fuentePrincipal: 'DashDemo', Arial, sans-serif
 }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: var(--fuentePrincipal);
@@ -21,6 +26,8 @@ body {
     width: 100%;
 }
 
+/*  Estilos para el header */
+
 nav {
     
     background-color: var(--secundario);
@@ -29,7 +36,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem;
-    height: 20vh;
+    height: 10vh;
 }
 
 .logo img {
@@ -39,7 +46,7 @@ nav {
 .menu {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     width: 100%;
 }
@@ -47,6 +54,7 @@ nav {
 .menu li {
     margin-right:0 1.5rem;
     padding: 1rem;
+
 }
 
 .menu a {
